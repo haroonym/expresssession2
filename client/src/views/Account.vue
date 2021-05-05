@@ -34,9 +34,10 @@ export default {
       method: 'get',
       url: '/secretdata',
     });
+    let acc = JSON.parse(localStorage.getItem('user'));
+    this.user.id = acc.id;
+    this.user.name = acc.name;
     this.prime = result.data;
-    this.user.id = localStorage.getItem('id');
-    this.user.name = localStorage.getItem('name');
   },
 };
 </script>
